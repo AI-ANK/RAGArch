@@ -1,0 +1,7 @@
+google-generativeai
+llama-index
+openai
+cohere
+sentence_transformers
+pypdf
+transformers

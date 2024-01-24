@@ -10,3 +10,4 @@ tree_sitter_languages
 chromadb
 faiss-cpu
 qdrant-client
+pymilvus

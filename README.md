@@ -19,3 +19,23 @@ RAGArch is a Streamlit-based application that empowers users to experiment with 
 
    ```bash
    streamlit run app.py
+   
+3. Configure Your Pipeline:
+- Upload your data file.
+- Select your preferred Language Model, Embedding Model, and other pipeline components.
+- Click "Generate RAG Pipeline" to test the pipeline with your data.
+- Enter your query in the text input that appears and click 'Send' to send the query to the LLM and receive response.
+
+4. Generate Code:
+After testing, click "Generate Code Snippet" to receive the Python code for your custom configuration.
+
+## Installation
+
+```bash
+git clone https://github.com/your-username/RAGArch.git
+cd RAGArch
+pip install -r requirements.txt```
+
+3. dasda
+
+

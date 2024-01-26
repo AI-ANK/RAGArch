@@ -1,6 +1,7 @@
+```
 # RAGArch: Optimize & Generate RAG Pipelines with Ease
 
-RAGArch is a Streamlit-based application that empowers users to experiment with various components and parameters of Retrieval-Augmented Generation (RAG) pipelines. Utilizing the power of Llamaindex, RAGArch facilitates the testing of different configurations to see how they perform. Once satisfied, users can generate the Python code for their custom RAG pipeline configurations, enabling easy integration into their applications.
+RAGArch is a Streamlit-based application that empowers users to experiment with various components and parameters of Retrieval-Augmented Generation (RAG) pipelines, providing a platform for easy optimization and code generation for your custom configurations.
 
 ## Features
 
@@ -19,15 +20,15 @@ RAGArch is a Streamlit-based application that empowers users to experiment with 
 
    ```bash
    streamlit run app.py
-   
-3. Configure Your Pipeline:
-- Upload your data file.
-- Select your preferred Language Model, Embedding Model, and other pipeline components.
-- Click "Generate RAG Pipeline" to test the pipeline with your data.
-- Enter your query in the text input that appears and click 'Send' to send the query to the LLM and receive response.
+   ```
 
-4. Generate Code:
-After testing, click "Generate Code Snippet" to receive the Python code for your custom configuration.
+3. **Configure Your Pipeline:**
+   - Upload your data file.
+   - Select your preferred Language Model, Embedding Model, and other pipeline components.
+   - Click "Generate RAG Pipeline" to test the pipeline with your data.
+
+4. **Generate Code:**
+   After testing, click "Generate Code Snippet" to receive the Python code for your custom configuration.
 
 ## Installation
 
@@ -35,5 +36,37 @@ After testing, click "Generate Code Snippet" to receive the Python code for your
 git clone https://github.com/your-username/RAGArch.git
 cd RAGArch
 pip install -r requirements.txt
+```
 
-## dasda
+## Requirements
+
+- Python 3.6+
+- Streamlit
+- Llamaindex
+- Faiss
+- Qdrant Client
+- Pinecone (optional)
+
+## Contributing
+
+Contributions to RAGArch are welcome! Please read the `CONTRIBUTING.md` for guidelines on how to contribute.
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.
+
+## Support
+
+For support, please open an issue in the GitHub issue tracker.
+
+## Authors
+
+- Your Name - Initial work - [your-username](https://github.com/your-username)
+
+See also the list of [contributors](https://github.com/your-username/RAGArch/contributors) who participated in this project.
+
+## Acknowledgments
+
+- Thanks to Llamaindex for providing the backbone for RAG pipeline testing and optimization.
+- Appreciation for the Streamlit community for their easy-to-use web application framework.
+```

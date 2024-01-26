@@ -275,6 +275,27 @@ def main():
     - **Automatically Generate Plug-and-Play Implementation Code Based on Your Configuration**
     """)
 
+    # Sidebar Intro
+    st.sidebar.markdown('## App Created By')
+    st.sidebar.markdown("""
+    Harshad Suryawanshi: 
+    [Linkedin](https://www.linkedin.com/in/harshadsuryawanshi/), [Medium](https://harshadsuryawanshi.medium.com/), [X](https://twitter.com/HarshadSurya1c)
+    """)
+    st.sidebar.markdown('## Other Projects')
+    st.sidebar.markdown("""
+    - [C3 Voice Assistant - Making LLM/RAG Apps Accessible to Everyone](https://www.linkedin.com/posts/harshadsuryawanshi_ai-llamaindex-gpt3-activity-7149796976442740736-1lXj?utm_source=share&utm_medium=member_desktop)
+    - [NA2SQL - Extracting Insights from Databases using Natural Language](https://www.linkedin.com/posts/harshadsuryawanshi_ai-llamaindex-streamlit-activity-7141801596006440960-mCjT)
+    - [Pokemon Go! Inspired AInimal GO! - Multimodal RAG App](https://www.linkedin.com/posts/harshadsuryawanshi_llamaindex-ai-deeplearning-activity-7134632983495327744-M7yy)
+    - [Building My Own GPT4-V with PaLM and Kosmos](https://lnkd.in/dawgKZBP)
+    - [AI Equity Research Analyst](https://ai-eqty-rsrch-anlyst.streamlit.app/)
+    - [Recasting "The Office" Scene](https://blackmirroroffice.streamlit.app/)
+    - [Story Generator](https://appstorycombined-agaf9j4ceit.streamlit.app/)
+    """)
+    
+    st.sidebar.markdown('## Disclaimer')
+    st.sidebar.markdown("""This application is for demonstration purposes only and may not cover all aspects of real-world data complexities. Please use it as a guide and not as a definitive source for decision-making.""")
+    
+
     # Upload file
     file = upload_file()
 

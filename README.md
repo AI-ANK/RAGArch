@@ -34,8 +34,6 @@ After testing, click "Generate Code Snippet" to receive the Python code for your
 ```bash
 git clone https://github.com/your-username/RAGArch.git
 cd RAGArch
-pip install -r requirements.txt```
+pip install -r requirements.txt
 
-3. dasda
-
-
+## dasda

@@ -65,7 +65,7 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 For support, please open an issue in the GitHub issue tracker.
 
 ## Live Demo
-[Try the demo here!]([https://na2sql.streamlit.app](https://huggingface.co/spaces/AI-ANK/RAGArch))
+[Try the demo here!](https://huggingface.co/spaces/AI-ANK/RAGArch)
 
 
 ## Authors

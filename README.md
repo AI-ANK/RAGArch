@@ -44,22 +44,17 @@ pip install -r requirements.txt
 - LLM Orchestration: Llamaindex
 - LLMs: OpenAI GPT 3.5 and 4, Cohere API, Gemini Pro
 - Embedding Models:
-   -     "BAAI/bge-small-en-v1.5",
-   -     "WhereIsAI/UAE-Large-V1",
-        "BAAI/bge-large-en-v1.5",
-        "khoa-klaytn/bge-small-en-v1.5-angle",
-        "BAAI/bge-base-en-v1.5",
-        "llmrails/ember-v1",
-        "jamesgpt1/sf_model_e5",
-        "thenlper/gte-large",
-        "infgrad/stella-base-en-v2",
-        "thenlper/gte-base" 
-- Qdrant Client
-- Pinecone (optional)
-
-## Contributing
-
-Contributions to RAGArch are welcome! Please read the `CONTRIBUTING.md` for guidelines on how to contribute.
+   - "BAAI/bge-small-en-v1.5"
+   - "WhereIsAI/UAE-Large-V1"
+   - "BAAI/bge-large-en-v1.5"
+   - "khoa-klaytn/bge-small-en-v1.5-angle"
+   - "BAAI/bge-base-en-v1.5"
+   - "llmrails/ember-v1"
+   - "jamesgpt1/sf_model_e5"
+   - "thenlper/gte-large"
+   - "infgrad/stella-base-en-v2"
+   - "thenlper/gte-base" 
+- Vector Stores: Simple, Pinecone, Qdrant
 
 ## License
 
@@ -69,14 +64,10 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 For support, please open an issue in the GitHub issue tracker.
 
+## Live Demo
+[Try the demo here!](https://na2sql.streamlit.app)
+
+
 ## Authors
-
-- Your Name - Initial work - [your-username](https://github.com/your-username)
-
-See also the list of [contributors](https://github.com/your-username/RAGArch/contributors) who participated in this project.
-
-## Acknowledgments
-
-- Thanks to Llamaindex for providing the backbone for RAG pipeline testing and optimization.
-- Appreciation for the Streamlit community for their easy-to-use web application framework.
-```
+### Developed by [Harshad Suryawanshi](https://www.linkedin.com/in/harshadsuryawanshi/)
+If you find this project useful, consider giving it a ⭐ on GitHub!

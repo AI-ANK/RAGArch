@@ -1,13 +1,12 @@
-import os, tempfile, faiss, qdrant_client
+import os, tempfile, qdrant_client
 import streamlit as st
-from io import StringIO
 from llama_index.llms import OpenAI, Gemini, Cohere
 from llama_index.embeddings import HuggingFaceEmbedding
 from llama_index import SimpleDirectoryReader, ServiceContext, VectorStoreIndex, StorageContext
 from llama_index.node_parser import SentenceSplitter, CodeSplitter, SemanticSplitterNodeParser, TokenTextSplitter
 from llama_index.node_parser.file import HTMLNodeParser, JSONNodeParser, MarkdownNodeParser
-from llama_index.vector_stores import FaissVectorStore, MilvusVectorStore, QdrantVectorStore, PineconeVectorStore
-from pinecone import Pinecone, PodSpec
+from llama_index.vector_stores import QdrantVectorStore, PineconeVectorStore
+from pinecone import Pinecone
 
 
 def reset_pipeline_generated():
@@ -208,8 +207,8 @@ def generate_code_snippet(llm_choice, embed_model_choice, node_parser_choice, re
     code_snippet += "from llama_index import ServiceContext, VectorStoreIndex, StorageContext\n"
     code_snippet += "from llama_index.node_parser import SentenceSplitter, CodeSplitter, SemanticSplitterNodeParser, TokenTextSplitter\n"
     code_snippet += "from llama_index.node_parser.file import HTMLNodeParser, JSONNodeParser, MarkdownNodeParser\n"
-    code_snippet += "from llama_index.vector_stores import FaissVectorStore, MilvusVectorStore, QdrantVectorStore\n"
-    code_snippet += "import faiss, qdrant_client\n\n"
+    code_snippet += "from llama_index.vector_stores import MilvusVectorStore, QdrantVectorStore\n"
+    code_snippet += "import qdrant_client\n\n"
 
     # LLM initialization
     if llm_choice == "GPT-3.5":
@@ -270,7 +269,7 @@ def generate_code_snippet(llm_choice, embed_model_choice, node_parser_choice, re
     return code_snippet
 
 def main():
-    st.title("RAGArchitect: RAG Pipeline Tester and Code Generator")
+    st.title("RAGArch: RAG Pipeline Tester and Code Generator")
     st.markdown("""
     - **Configure and Test RAG Pipelines with Custom Parameters**
     - **Automatically Generate Plug-and-Play Implementation Code Based on Your Configuration**

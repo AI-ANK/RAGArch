@@ -1,26 +1,21 @@
-    # Use the parser to get nodes from documents
-    nodes = parser.get_nodes_from_documents(file)
-    if(nodes):
-        print(nodes[0].text)
-        #print(nodes[1].text)
+# RAGArch: Optimize & Generate RAG Pipelines with Ease
 
+RAGArch is a Streamlit-based application that empowers users to experiment with various components and parameters of Retrieval-Augmented Generation (RAG) pipelines. Utilizing the power of Llamaindex, RAGArch facilitates the testing of different configurations to see how they perform. Once satisfied, users can generate the Python code for their custom RAG pipeline configurations, enabling easy integration into their applications.
 
+## Features
 
+- **Interactive UI:** Test different RAG pipeline components through an intuitive web interface.
+- **Custom Configurations:** Choose from various Language Models, Embedding Models, Node Parsers, Response Synthesis Methods, and Vector Stores.
+- **Live Testing:** Upload your data and immediately see how your RAG pipeline performs.
+- **Code Generation:** Generate and export the Python code for your configured pipeline with a single click.
 
-nodes = parser.get_nodes_from_documents(file)
+## How to Use
 
-        # Initialize the language model
-    llm = OpenAI(model_name="gpt-3.5-turbo")
+1. **Set Up Your Environment:**
+   Ensure you have Python and Streamlit installed. Clone the repository and install the required dependencies.
 
-    # Create the service context
-    service_context = ServiceContext.from_defaults(llm=llm, node_parser=parser)
+2. **Launch the Application:**
+   Run the app with Streamlit:
 
-    # Create the vector index
-    vector_index = VectorStoreIndex.from_documents(documents=file, service_context=service_context, show_progress=True)
-    vector_index.storage_context.persist(persist_dir="persist_dir")
-
-    query_engine = vector_index.as_query_engine()
-    response = query_engine.query(
-    "provide 1 paragraph summary."
-    )
-    print(response)
+   ```bash
+   streamlit run app.py

@@ -1,4 +1,4 @@
-```
+
 # RAGArch: Optimize & Generate RAG Pipelines with Ease
 
 RAGArch is a Streamlit-based application that empowers users to experiment with various components and parameters of Retrieval-Augmented Generation (RAG) pipelines, providing a platform for easy optimization and code generation for your custom configurations.

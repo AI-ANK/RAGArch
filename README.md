@@ -1,12 +1,12 @@
 
-# RAGArch: Optimize & Generate RAG Pipelines with Ease
+# RAGArch: Configure/Test Llamaindex RAG Pipelines and One-click Autogenerate Plug-n-play Code
 
-RAGArch is a Streamlit-based application that empowers users to experiment with various components and parameters of Retrieval-Augmented Generation (RAG) pipelines, providing a platform for easy optimization and code generation for your custom configurations.
+RAGArch is a Streamlit-based application that empowers users to experiment with various components and parameters of Retrieval-Augmented Generation (RAG) pipelines. Utilizing the power of Llamaindex, RAGArch facilitates the testing of different configurations to see how they perform. Once satisfied, users can generate the Python code for their custom RAG pipeline configurations, enabling easy integration into their applications.
 
 ## Features
 
 - **Interactive UI:** Test different RAG pipeline components through an intuitive web interface.
-- **Custom Configurations:** Choose from various Language Models, Embedding Models, Node Parsers, Response Synthesis Methods, and Vector Stores.
+- **Custom Configurations:** Choose from various Large Language Models, Embedding Models, Node Parsers, Response Synthesis Methods, and Vector Stores.
 - **Live Testing:** Upload your data and immediately see how your RAG pipeline performs.
 - **Code Generation:** Generate and export the Python code for your configured pipeline with a single click.
 
@@ -38,12 +38,22 @@ cd RAGArch
 pip install -r requirements.txt
 ```
 
-## Requirements
+## Tools and Technologies
 
-- Python 3.6+
-- Streamlit
-- Llamaindex
-- Faiss
+- UI: Streamlit
+- LLM Orchestration: Llamaindex
+- LLMs: OpenAI GPT 3.5 and 4, Cohere API, Gemini Pro
+- Embedding Models:
+   -     "BAAI/bge-small-en-v1.5",
+   -     "WhereIsAI/UAE-Large-V1",
+        "BAAI/bge-large-en-v1.5",
+        "khoa-klaytn/bge-small-en-v1.5-angle",
+        "BAAI/bge-base-en-v1.5",
+        "llmrails/ember-v1",
+        "jamesgpt1/sf_model_e5",
+        "thenlper/gte-large",
+        "infgrad/stella-base-en-v2",
+        "thenlper/gte-base" 
 - Qdrant Client
 - Pinecone (optional)
 

@@ -58,6 +58,11 @@ def select_llm():
 
 def select_embedding_model():
     st.header("Choose Embedding Model")
+    col1, col2 = st.columns([2,1])
+    with col2:
+        st.markdown("""
+                    [Embedding Models Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)
+                    """)
     model_names = [
         "BAAI/bge-small-en-v1.5",
         "WhereIsAI/UAE-Large-V1",
@@ -83,6 +88,11 @@ def select_embedding_model():
 
 def select_node_parser():
     st.header("Choose Node Parser")
+    col1, col2 = st.columns([4,1])
+    with col2:
+        st.markdown("""
+                    [More Information](https://docs.llamaindex.ai/en/stable/module_guides/loading/node_parsers/root.html)
+                    """)
     parser_types = ["SentenceSplitter", "CodeSplitter", "SemanticSplitterNodeParser",
                     "TokenTextSplitter", "HTMLNodeParser", "JSONNodeParser", "MarkdownNodeParser"]
     parser_type = st.selectbox("Select Node Parser", parser_types, on_change=reset_pipeline_generated)
@@ -140,6 +150,11 @@ def select_node_parser():
 
 def select_response_synthesis_method():
     st.header("Choose Response Synthesis Method")
+    col1, col2 = st.columns([4,1])
+    with col2:
+        st.markdown("""
+                    [More Information](https://docs.llamaindex.ai/en/stable/module_guides/querying/response_synthesizers/response_synthesizers.html)
+                    """)
     response_modes = [
         "refine",
         "tree_summarize",  
@@ -239,12 +254,10 @@ def generate_code_snippet(llm_choice, embed_model_choice, node_parser_choice, re
     code_snippet += f"response_mode = '{response_mode}'\n\n"
 
     # Vector store initialization
-    if vector_store_choice == "Faiss":
-        code_snippet += "d = 1536\n"
-        code_snippet += "faiss_index = faiss.IndexFlatL2(d)\n"
-        code_snippet += "vector_store = FaissVectorStore(faiss_index=faiss_index)\n"
-    elif vector_store_choice == "Milvus":
-        code_snippet += "vector_store = MilvusVectorStore(dim=1536, overwrite=True)\n"
+    if vector_store_choice == "Pinecone":
+        code_snippet += "pc = Pinecone(api_key=os.environ['PINECONE_API_KEY'])\n"
+        code_snippet += "index = pc.Index('test')\n"
+        code_snippet += "vector_store = PineconeVectorStore(pinecone_index=index)\n"
     elif vector_store_choice == "Qdrant":
         code_snippet += "client = qdrant_client.QdrantClient(location=':memory:')\n"
         code_snippet += "vector_store = QdrantVectorStore(client=client, collection_name='sampledata')\n"
